@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D03740</color>
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="login_bg">#E9E8EBF5</color>
+    <color name="container">#F6F7F8</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="blue">#D03740</color>
+    <color name="text_light_shade">#A5ACB8</color>
+    <color name="seperator">#D0D7DD</color>
+    <color name="wlcolor">#C1D9E7</color>
+    <color name="color_break_in">#008859</color>
+    <color name="color_break_out">#F26333</color>
+    <color name="line_black">#83A6A6A6</color>
+
+    <color name="image_tint">#595C616F</color>
+    <color name="bottom_sheet_bg">#F0E8EBF5</color>
+
+    <color name="text_color_primary">#1761C5</color>
+    <color name="text_color_light">#B7F6F7F8</color>
+    <color name="text_color_light2">#5C616F</color>
+    <color name="text_color_light3">#995C616F</color>
+    <color name="text_color_green">#008859</color>
+    <color name="text_color_red">#F26333</color>
+    <color name="text_color_yellow">#C38E08</color>
+
+
+
+    <color name="al_Color">#D03740</color>
+    <color name="cl_Color">#F26333</color>
+    <color name="sl_Color">#10B364</color>
+    <color name="restl_Color">#CCCACA</color>
+    <color name="total_leaves_highlighted_color">#D03740</color>
+
+    <color name="text_color_black">#040C22</color>
+    <color name="text_color_grey">#5C616F</color>
+    <color name="grey">#373737</color>
+    <color name="app_color_primary_light">#148DC2</color>
+    <color name="darKText">#040C22</color>
+    <color name="subTitleDark">#363D4E</color>
+    <color name="hintLabel">#5C616F</color>
+    <color name="hintColor">#9A9999</color>
+    <color name="colorSecondary">#D03740</color>
+    <color name="viewBg">#F1F1F1</color>
+    <color name="iconColor">#040C22</color>
+    <color name="liteGrey">#A9A9A9</color>
+    <color name="midGrey">#949494</color>
+    <color name="viewUnderline">#D1D1D1</color>
+    <color name="bodyGrey">#505050</color>
+    <color name="color_9A9999">#9A9999</color>
+
+
+</resources>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin10dp">10dp</dimen>
+    <dimen name="mediumTextSize">14sp</dimen>
+    <dimen name="smallTextSize">12sp</dimen>
+    <dimen name="largeTextSize">16sp</dimen>
+    <dimen name="largeText_X_Size">18sp</dimen>
+    <dimen name="otp_box_width">40dp</dimen>
+</resources>

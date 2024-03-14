@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.HomeActivity"
+        android:background="@color/white">
+
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainerView"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            android:layout_above="@+id/bottomNavigationLinearLayout"
+            app:navGraph="@navigation/home_navigation" />
+
+        <LinearLayout
+            android:id="@+id/bottomNavigationLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+
+            <include
+                android:id="@+id/bottomNavigationViewInclude"
+                layout="@layout/bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/homeImageView"
+            android:layout_width="@dimen/_115sdp"
+            android:layout_height="@dimen/_70sdp"
+            app:layout_anchor="@id/bottomNavigationLinearLayout"
+            android:background="@drawable/curve"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="35dp"
+            android:elevation="0dp"/>
+
+        <FrameLayout
+            android:id="@+id/homeImageButtonFrameLayout"
+            android:background="@drawable/hom_fab"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/homeImageButton"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:src="@drawable/home_select"
+                app:civ_border_width="0dp"
+                android:layout_gravity="center"
+                app:civ_border_color="#FF000000"/>
+
+        </FrameLayout>
+    </RelativeLayout>
+</layout>

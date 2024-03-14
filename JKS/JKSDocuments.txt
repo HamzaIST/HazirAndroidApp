@@ -1,0 +1,2 @@
+alias - hazir
+password- hazir123456

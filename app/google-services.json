@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "581727248778",
+    "project_id": "hazir-f6d39",
+    "storage_bucket": "hazir-f6d39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:581727248778:android:f8820f5ad81d615acda873",
+        "android_client_info": {
+          "package_name": "technology.innovate.haziremployee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBc74UzogBuqlqEE3IOLKUiiazTM0M67rI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

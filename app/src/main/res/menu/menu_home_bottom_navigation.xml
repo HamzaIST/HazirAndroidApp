@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/services"
+        android:enabled="true"
+        android:icon="@drawable/service_icon"
+        android:title="Logs" />
+    <item
+        android:id="@+id/requests"
+        android:enabled="true"
+        android:icon="@drawable/request_icon"
+        android:title="Requests" />
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:title="Home" />
+    <item
+        android:id="@+id/notifications"
+        android:enabled="true"
+        android:icon="@drawable/notification"
+        android:title="Notifications" />
+    <item
+        android:id="@+id/profile"
+        android:enabled="true"
+        android:icon="@drawable/profile_icon"
+        android:title="Profile" />
+</menu>

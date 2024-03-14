@@ -1,0 +1,29 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+
+    }
+//    dependencies {
+//        // ...
+//
+//        // Check that you have the Google services Gradle plugin v4.3.2 or later
+//        // (if not, add it).
+//        classpath 'com.google.gms:google-services:4.3.12'
+//
+//        // Add the Crashlytics Gradle plugin
+//        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.9.1'
+//    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+    }
+}
+rootProject.name = "MAccess"
+include ':app', ':picker'

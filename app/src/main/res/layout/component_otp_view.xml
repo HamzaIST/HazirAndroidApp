@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+
+        <EditText
+            android:id="@+id/pinOneEditText"
+            style="@style/PinEditTextStyle"
+            android:layout_width="@dimen/otp_box_width"
+            android:layout_height="@dimen/otp_box_width"
+            android:background="@drawable/pin_focused"
+            android:inputType="number"
+            android:textColor="@color/colorPrimary" />
+
+
+        <EditText
+            android:id="@+id/pinTwoEditText"
+            style="@style/PinEditTextStyle"
+            android:layout_width="@dimen/otp_box_width"
+            android:layout_height="@dimen/otp_box_width"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/pin_focused"
+            android:inputType="number"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/pinThreeEditText"
+            style="@style/PinEditTextStyle"
+            android:layout_width="@dimen/otp_box_width"
+            android:layout_height="@dimen/otp_box_width"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/pin_focused"
+            android:inputType="number"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/pinFourEditText"
+            style="@style/PinEditTextStyle"
+            android:layout_width="@dimen/otp_box_width"
+            android:layout_height="@dimen/otp_box_width"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/pin_focused"
+            android:inputType="number"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/pinFiveEditText"
+            style="@style/PinEditTextStyle"
+            android:layout_width="@dimen/otp_box_width"
+            android:layout_height="@dimen/otp_box_width"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/pin_focused"
+            android:inputType="number"
+            android:textColor="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/pinSixEditText"
+            style="@style/PinEditTextStyle"
+            android:layout_width="@dimen/otp_box_width"
+            android:layout_height="@dimen/otp_box_width"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/pin_focused"
+            android:inputType="number"
+            android:textColor="@color/colorPrimary" />
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/pinHiddenEditText"
+        android:layout_width="1dp"
+        android:layout_height="1dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@null"
+        android:cursorVisible="false"
+        android:gravity="center_horizontal"
+        android:inputType="number"
+        android:maxLength="6"
+        android:password="true"
+        android:textColor="#00000000" />
+</LinearLayout>

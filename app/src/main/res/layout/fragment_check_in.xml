@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#E3E3E3">
+
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:layout_marginBottom="-10dp"
+        android:animateLayoutChanges="true"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.gms.maps.MapView
+            android:id="@+id/googleMap"
+            android:layout_width="match_parent"
+            android:tag="Frag_map"
+            android:layout_height="match_parent" />
+        <RelativeLayout
+            android:id="@+id/progress_bar"
+            android:layout_width="match_parent"
+            android:background="@color/white"
+            android:layout_height="match_parent">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/al_Color" />
+        </RelativeLayout>
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Time Clock"
+            android:fitsSystemWindows="true"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/tittle" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/placeName"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/ed_background"
+            android:drawableLeft="@drawable/ic_map_pin"
+            android:drawablePadding="8dp"
+            android:paddingLeft="14dp"
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:textSize="18sp"
+            android:textColor="#1B2730"
+            android:gravity="center|left"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/check_in_layout_bg"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <View
+            android:layout_width="48dp"
+            android:layout_height="4dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/line_bg" />
+
+
+        <LinearLayout
+            android:id="@+id/shiftBt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            >
+            <TextView
+                style="@style/InputTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:text="Select Project"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/projecterror"
+                android:visibility="gone"
+                style="@style/InputTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:textColor="@color/text_color_red"
+                android:textStyle="bold"
+                android:text="Please Select Correct Search Project First"
+                tools:ignore="HardcodedText" />
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:padding="@dimen/_5sdp"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:orientation="vertical">
+
+                    <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                        android:visibility="gone"
+                        android:id="@+id/designationspinner"
+                        style="@style/SpinnerThemeNormalDropdownArrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:spinnerMode="dropdown" />
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <LinearLayout
+                            android:layout_weight="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:weightSum="1"
+                                android:layout_weight="6"
+                                android:layout_width="0dp"
+
+
+
+                                android:layout_height="match_parent">
+                                <EditText
+
+                                    android:clickable="true"
+                                    android:id="@+id/searchview"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@android:color/transparent"
+
+                                    android:hint="Search For Project"
+                                    android:imeOptions="actionSearch"
+                                    android:inputType="text"
+                                    android:lines="1"
+                                    android:paddingHorizontal="@dimen/_10sdp"
+                                    android:paddingVertical="@dimen/_7sdp"
+                                    android:textColorHint="#615D5D"
+                                    android:textSize="@dimen/_12sdp"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:visibility="gone"
+                                android:layout_weight="1"
+                                android:layout_width="60dp"
+                                android:layout_height="wrap_content">
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/add"
+
+
+                                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+
+                                    android:fontFamily="@font/roboto_medium"
+
+                                    android:paddingTop="@dimen/_12sdp"
+
+                                    android:paddingBottom="@dimen/_12sdp"
+                                    android:text="Add"
+                                    android:textAllCaps="false"
+
+
+                                    android:textColor="@color/white"
+                                    app:backgroundTint="@color/colorSecondary"
+                                    app:cornerRadius="@dimen/_7sdp" />
+
+
+                            </LinearLayout>
+
+
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:visibility="gone"
+                        android:id="@+id/designationerror"
+                        style="@style/InputTitleTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="This field is required"
+                        android:textColor="@color/text_color_red"
+                        tools:ignore="HardcodedText" />
+
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="80dp"
+               android:layout_gravity="center_horizontal"
+               android:background="@drawable/shift_gradient"
+               android:orientation="horizontal"
+
+               android:visibility="visible">
+
+
+            <pl.droidsonroids.gif.GifImageView
+                android:id="@+id/gif"
+                android:layout_width="60dp"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/bold700"
+                android:gravity="center"
+                android:text="Start Shift"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:padding="26dp"
+                android:src="@drawable/arrow_white" />
+           </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:fontFamily="@font/medium500"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="Last Logged In at"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/medium500"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="2022-02-23 12:00:00" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/timeSheet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="22dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/circle_layout"
+                    android:elevation="8dp"
+                    android:padding="22dp"
+                    android:src="@drawable/time_sheet" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/medium500"
+                    android:gravity="center"
+                    android:text="Time Sheet"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="22dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/circle_layout"
+                    android:elevation="8dp"
+                    android:padding="22dp"
+                    android:src="@drawable/ament_log" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/medium500"
+                    android:gravity="center"
+                    android:text="Amend Log"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

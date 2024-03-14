@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+<LinearLayout
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:background="@color/viewBg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/heading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_16sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Request Documents"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_14ssp"
+        android:textStyle="bold" />
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/border_grey"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/InputTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Request for"
+                tools:ignore="HardcodedText" />
+
+
+            <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                android:id="@+id/documentTypesSpinner"
+                style="@style/SpinnerThemeNormalDropdownArrow"
+                android:layout_width="match_parent"
+                android:minHeight="@dimen/_30sdp"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/border_grey"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/InputTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Date Required By"
+                tools:ignore="HardcodedText" />
+
+
+            <TextView
+                android:id="@+id/dateTextView"
+                style="@style/ValueTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                app:drawableEndCompat="@drawable/ic_calander_3"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/border_grey"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/InputTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Email Address"
+                tools:ignore="HardcodedText" />
+
+
+            <EditText
+                android:id="@+id/emailAddressTextView"
+                style="@style/ValueTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/border_grey"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/InputTitleTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="Description"
+                tools:ignore="HardcodedText" />
+
+
+            <EditText
+                android:id="@+id/descriptionTextView"
+                style="@style/ValueTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:imeOptions="actionNext"
+                android:gravity="top"
+                android:inputType="text"
+                android:minHeight="@dimen/_50sdp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/attachCardView"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/white"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:background="@drawable/border_grey"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    style="@style/InputTitleTheme"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.0"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Attach a File (Optional)"
+                    tools:ignore="HardcodedText" />
+                <ImageView
+                    android:id="@+id/remove"
+                    android:src="@drawable/remove"
+                    android:layout_marginEnd="@dimen/_3sdp"
+                    android:layout_width="@dimen/_15sdp"
+                    android:layout_height="@dimen/_15sdp"/>
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/attachmentFileTextView"
+                style="@style/ValueTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginTop="@dimen/_5sdp"
+                app:drawableEndCompat="@drawable/ic_attechment"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/submitMaterialButton"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/roboto_medium"
+        android:layout_marginStart="@dimen/_16sdp"
+        android:paddingTop="@dimen/_12sdp"
+        android:layout_marginEnd="@dimen/_16sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:layout_marginBottom="@dimen/_36sdp"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_gravity="bottom"
+        app:backgroundTint="@color/colorSecondary"
+        app:cornerRadius="@dimen/_7sdp" />
+
+
+</LinearLayout>
+
+</ScrollView>
+

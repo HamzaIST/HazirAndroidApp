@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="employee_login">Employee Login</string>
+    <string name="employee_login_description">Simply enter your existing username and the corresponding password.</string>
+    <string name="forgotPassword">Forgot Password?</string>
+</resources>

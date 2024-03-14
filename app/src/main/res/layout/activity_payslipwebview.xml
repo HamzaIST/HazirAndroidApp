@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="isLoading"
+            type="Boolean" />
+
+        <variable
+            name="isLoadingMore"
+            type="Boolean" />
+
+        <import type="android.view.View" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@drawable/home_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/top"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/materialToolbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:navigationIcon="@drawable/ic_back"
+                app:navigationIconTint="@color/white"
+
+                app:titleCentered="true"
+                app:titleTextAppearance="@style/tittle"
+                app:titleTextColor="@color/white" />
+            <TextView
+                android:layout_marginRight="@dimen/_40sdp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:text="Pay Slip"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/export"
+            android:padding="@dimen/_10sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@drawable/download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:tint="@color/white" />
+
+
+
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/check_in_layout_bg"
+            android:clipToPadding="true"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/top">
+
+
+            <WebView
+                android:id = "@+id/web_view"
+                android:layout_width = "match_parent"
+                android:layout_height = "match_parent" />
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/error_layout"
+                layout="@layout/error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <LinearLayout-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        tools:context=".ui.payslip.Payslipwebview">-->
+<!--        <com.google.android.material.appbar.MaterialToolbar-->
+<!--            android:id="@+id/materialToolbar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:navigationIcon="@drawable/ic_back"-->
+
+
+<!--            app:titleCentered="true"-->
+<!--            app:titleTextAppearance="@style/tittle"-->
+<!--            app:titleTextColor="@color/white" />-->
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:visibility="gone"-->
+<!--            android:id="@+id/export"-->
+<!--            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="@dimen/_20sdp"-->
+<!--            android:fontFamily="@font/roboto_medium"-->
+<!--            android:paddingStart="@dimen/_10sdp"-->
+<!--            android:paddingTop="@dimen/_12sdp"-->
+<!--            android:paddingEnd="@dimen/_10sdp"-->
+<!--            android:paddingBottom="@dimen/_12sdp"-->
+<!--            android:text="Export"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:textColor="@color/white"-->
+<!--            app:backgroundTint="@color/colorSecondary"-->
+<!--            app:cornerRadius="@dimen/_7sdp" />-->
+
+<!--        <WebView-->
+<!--            android:id = "@+id/web_view"-->
+<!--            android:layout_width = "match_parent"-->
+<!--            android:layout_height = "match_parent" />-->
+
+<!--        <ProgressBar-->
+<!--            android:id="@+id/progress_bar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:visibility="gone" />-->
+
+<!--        <include-->
+<!--            android:id="@+id/error_layout"-->
+<!--            layout="@layout/error_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:visibility="gone" />-->
+<!--    </LinearLayout>-->
+
+</layout>

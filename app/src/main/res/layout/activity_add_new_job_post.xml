@@ -1,0 +1,1214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.manager.Addnewjob.AddNewJobPost">
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="270dp"
+            android:background="@drawable/home_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/materialToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_back"
+            app:navigationIconTint="@color/white"
+            app:title="Add Job Post"
+            app:titleCentered="true"
+            app:titleTextAppearance="@style/tittle"
+            app:titleTextColor="@color/white" />
+
+        <RelativeLayout
+            android:id="@+id/form"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/check_in_layout_bg"
+            android:clipToPadding="true"
+            android:paddingTop="16dp"
+            android:backgroundTint="@color/quantum_grey100"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialToolbar">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp">
+
+                <ScrollView
+                    android:scrollbars="none"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_10sdp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <androidx.cardview.widget.CardView
+                            android:visibility="gone"
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                android:id="@+id/userNameTextInputLayout"
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/firstname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="First Name"
+
+                                    android:inputType="textPersonName"
+                                    android:paddingTop="@dimen/_22sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/middlename"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="Middle Name"
+                                    android:inputType="textPersonName"
+                                    android:paddingTop="@dimen/_22sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/jobname"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="Job Name"
+                                    android:inputType="textPersonName"
+                                    android:paddingTop="@dimen/_22sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Designation"
+                                            tools:ignore="HardcodedText" />
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                                                android:id="@+id/designationspinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/designationerror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+                                    android:layout_marginStart="@dimen/_16sdp"
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Department"
+                                            tools:ignore="HardcodedText" />
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+
+                                            android:id="@+id/departmentspinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/departmenterror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Branch"
+                                            tools:ignore="HardcodedText" />
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                                            android:id="@+id/branchspinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/brancherror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+                                    android:layout_marginStart="@dimen/_16sdp"
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Job Type"
+                                            tools:ignore="HardcodedText" />
+
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                                            android:id="@+id/jobtypespinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/jobtypeerror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+
+
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Company"
+                                            tools:ignore="HardcodedText" />
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                                            android:id="@+id/companyspinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/companyerror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+                                    android:layout_marginStart="@dimen/_16sdp"
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Job Category"
+                                            tools:ignore="HardcodedText" />
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                                            android:id="@+id/jobcategoryspinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/jobcategoryerror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+
+
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:textColorHint="@color/hintLabel"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                        app:boxStrokeWidth="0dp"
+                                        app:boxStrokeWidthFocused="0dp"
+                                        app:hintTextColor="@color/hintLabel">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/minexperience"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:hint="Min. Experience"
+                                            android:maxLength="2"
+                                            android:inputType="number"
+                                            android:paddingTop="@dimen/_22sdp"
+                                            android:textColor="@color/darKText"
+                                            android:textColorHint="@color/hintColor" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:textColorHint="@color/hintLabel"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                        app:boxStrokeWidth="0dp"
+                                        app:boxStrokeWidthFocused="0dp"
+                                        app:hintTextColor="@color/hintLabel">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/maxexperience"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:hint="Max. Experience"
+                                            android:maxLength="2"
+                                            android:inputType="number"
+                                            android:paddingTop="@dimen/_22sdp"
+                                            android:textColor="@color/darKText"
+                                            android:textColorHint="@color/hintColor" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/country"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="Job Location"
+                                    android:inputType="textPersonName"
+                                    android:padding="@dimen/_10sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <CheckBox
+                                android:id="@+id/salary"
+                                android:text="Show Salary in Job Page"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"/>
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:textColorHint="@color/hintLabel"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                        app:boxStrokeWidth="0dp"
+                                        app:boxStrokeWidthFocused="0dp"
+                                        app:hintTextColor="@color/hintLabel">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/minsalary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:hint="Min. Salary"
+                                            android:inputType="number"
+                                            android:paddingTop="@dimen/_22sdp"
+                                            android:textColor="@color/darKText"
+                                            android:textColorHint="@color/hintColor" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </androidx.cardview.widget.CardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <androidx.cardview.widget.CardView
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_marginLeft="@dimen/_10sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <com.google.android.material.textfield.TextInputLayout
+
+                                        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+
+                                        android:textColorHint="@color/hintLabel"
+                                        app:boxBackgroundColor="@color/white"
+                                        app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                        app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                        app:boxStrokeWidth="0dp"
+                                        app:boxStrokeWidthFocused="0dp"
+                                        app:hintTextColor="@color/hintLabel">
+
+                                        <com.google.android.material.textfield.TextInputEditText
+                                            android:id="@+id/maxsalary"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/roboto_regular"
+                                            android:hint="Max. Salary"
+
+                                            android:inputType="number"
+                                            android:paddingTop="@dimen/_22sdp"
+                                            android:textColor="@color/darKText"
+                                            android:textColorHint="@color/hintColor" />
+                                    </com.google.android.material.textfield.TextInputLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/jobcurrency"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="Job Currency"
+                                    android:inputType="textPersonName"
+                                    android:padding="@dimen/_10sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/noofposition"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="No. of Position"
+                                    android:inputType="textPersonName"
+                                    android:paddingTop="@dimen/_22sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <LinearLayout
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="Status"
+                                            tools:ignore="HardcodedText" />
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                                            android:id="@+id/statusspinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/statusspinnererror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_weight="1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+                                <com.google.android.material.card.MaterialCardView
+                                    android:layout_width="match_parent"
+                                    app:cardBackgroundColor="@color/white"
+                                    android:layout_marginStart="@dimen/_16sdp"
+
+                                    android:layout_marginTop="@dimen/_15sdp"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:padding="@dimen/_5sdp"
+                                        android:background="@drawable/border_grey"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="No. Of Round"
+                                            tools:ignore="HardcodedText" />
+
+
+                                        <technology.innovate.haziremployee.utility.DynamicWidthSpinner
+                                            android:id="@+id/roundspinner"
+                                            style="@style/SpinnerThemeNormalDropdownArrow"
+                                            android:layout_width="match_parent"
+                                            android:minHeight="@dimen/_20sdp"
+                                            android:layout_height="wrap_content"
+                                            android:spinnerMode="dropdown" />
+
+
+
+                                        <TextView
+                                            android:visibility="gone"
+                                            android:id="@+id/roundspinnererror"
+                                            style="@style/InputTitleTheme"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:ellipsize="end"
+                                            android:maxLines="1"
+                                            android:text="This field is required"
+                                            android:textColor="@color/text_color_red"
+                                            tools:ignore="HardcodedText" />
+
+                                    </LinearLayout>
+                                </com.google.android.material.card.MaterialCardView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/jobdescription"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="Job Description"
+                                    android:inputType="textPersonName"
+                                    android:paddingTop="@dimen/_22sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp">
+
+                            <com.google.android.material.textfield.TextInputLayout
+
+                                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:textColorHint="@color/hintLabel"
+                                app:boxBackgroundColor="@color/white"
+                                app:boxCornerRadiusBottomEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusBottomStart="@dimen/_7sdp"
+                                app:boxCornerRadiusTopEnd="@dimen/_7sdp"
+                                app:boxCornerRadiusTopStart="@dimen/_7sdp"
+                                app:boxStrokeWidth="0dp"
+                                app:boxStrokeWidthFocused="0dp"
+                                app:hintTextColor="@color/hintLabel">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/jobresponsibility"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/roboto_regular"
+                                    android:hint="Job Responsibilities"
+                                    android:inputType="textPersonName"
+                                    android:paddingTop="@dimen/_22sdp"
+                                    android:textColor="@color/darKText"
+                                    android:textColorHint="@color/hintColor" />
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_40sdp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginLeft="@dimen/_4ssp"
+                                    android:layout_marginTop="@dimen/_4ssp"
+                                    android:layout_marginBottom="@dimen/_4ssp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textColor="@color/black"
+
+                                    android:text="Pre-requistes Question"                                android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+                                <LinearLayout
+                                    android:layout_weight="2"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <LinearLayout
+                                        android:weightSum="1"
+                                        android:layout_weight="6"
+                                        android:layout_width="0dp"
+
+
+
+                                        android:layout_height="match_parent">
+                                        <EditText
+                                            android:id="@+id/searchview"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@android:color/transparent"
+
+                                            android:hint="Search For Question"
+                                            android:imeOptions="actionSearch"
+                                            android:inputType="text"
+                                            android:lines="1"
+                                            android:paddingHorizontal="@dimen/_10sdp"
+                                            android:paddingVertical="@dimen/_7sdp"
+                                            android:textColorHint="#615D5D"
+                                            android:textSize="@dimen/_12sdp"
+                                            />
+                                    </LinearLayout>
+                                   <LinearLayout
+                                       android:layout_weight="1"
+                                       android:layout_width="60dp"
+                                       android:layout_height="wrap_content">
+                                       <com.google.android.material.button.MaterialButton
+                                           android:id="@+id/add"
+
+
+                                           style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                                           android:layout_width="wrap_content"
+                                           android:layout_height="wrap_content"
+                                           android:layout_alignParentBottom="true"
+
+                                           android:fontFamily="@font/roboto_medium"
+
+                                           android:paddingTop="@dimen/_12sdp"
+
+                                           android:paddingBottom="@dimen/_12sdp"
+                                           android:text="Add"
+                                           android:textAllCaps="false"
+
+
+                                           android:textColor="@color/white"
+                                           app:backgroundTint="@color/colorSecondary"
+                                           app:cornerRadius="@dimen/_7sdp" />
+
+
+                                   </LinearLayout>
+
+
+
+                                </LinearLayout>
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/recyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/selectedcardview"
+                            android:visibility="gone"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_40sdp"
+                            android:padding="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                                <TextView
+                                    android:layout_marginLeft="@dimen/_4ssp"
+                                    android:layout_marginTop="@dimen/_4ssp"
+                                    android:layout_marginBottom="@dimen/_4ssp"
+                                    android:textSize="@dimen/_12sdp"
+                                    android:textColor="@color/black"
+
+                                    android:text="Pre-requistes Question"                                android:layout_width="match_parent"
+                                    android:layout_height="match_parent"/>
+
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/questionrecyclerView"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+                            </LinearLayout>
+
+
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+
+
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:visibility="gone" />
+
+            <include
+                android:id="@+id/error_layout"
+                layout="@layout/error_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone" />
+            <com.google.android.material.button.MaterialButton
+
+                android:id="@+id/submitMaterialButton"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:fontFamily="@font/roboto_medium"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_12sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_12sdp"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:layout_marginRight="@dimen/_13sdp"
+                android:textColor="@color/white"
+                app:backgroundTint="@color/colorSecondary"
+                app:cornerRadius="@dimen/_7sdp" />
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

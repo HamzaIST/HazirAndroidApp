@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/viewBg"
+        android:overScrollMode="never"
+        android:fillViewport="true">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar">
+
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="0dp">
+
+                <com.google.android.material.appbar.AppBarLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_gradient"
+                    android:fitsSystemWindows="true"
+                    android:paddingTop="@dimen/_10ssp"
+                    android:paddingBottom="@dimen/_90sdp"
+                    app:elevation="0dp"
+                    app:layout_scrollFlags="scroll|enterAlways">
+
+
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:contentInsetEnd="0dp"
+                        app:contentInsetLeft="0dp"
+                        app:contentInsetRight="0dp"
+                        app:contentInsetStart="0dp">
+
+                        <RelativeLayout
+                            android:id="@+id/topRelativeLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingStart="@dimen/_5sdp"
+                            android:paddingEnd="@dimen/_5sdp">
+
+
+                            <ImageView
+                                android:id="@+id/backImageView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:layout_centerVertical="true"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:padding="@dimen/_6sdp"
+                                app:srcCompat="@drawable/ic_back"
+                                app:tint="@color/white"
+                                tools:ignore="UnusedAttribute" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/roboto_medium"
+                                android:text="Time Clock"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_14ssp" />
+
+
+                        </RelativeLayout>
+
+                    </androidx.appcompat.widget.Toolbar>
+                </com.google.android.material.appbar.AppBarLayout>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_90sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:weightSum="3">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/breakStatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/imageView2"
+                                        android:layout_width="22dp"
+                                        android:layout_height="22dp"
+                                        app:srcCompat="@drawable/ic_break_in" />
+
+                                    <TextView
+                                        android:id="@+id/statusName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginStart="4dp"
+                                        android:layout_marginEnd="4dp"
+                                        android:fontFamily="@font/bold700"
+                                        android:gravity="center"
+                                        android:text="Break In"
+                                        android:textColor="@color/color_break_in"
+                                        android:textSize="12sp" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/checkIn"
+                                    android:layout_width="120dp"
+                                    android:layout_height="80dp"
+                                    android:orientation="horizontal"
+                                    android:visibility="gone">
+
+                                    <pl.droidsonroids.gif.GifImageView
+                                        android:id="@+id/check_in_gif"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@color/image_tint" />
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/timeTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/normal400"
+                                    android:textColor="#6C717D" />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/projectnamelayout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/projectname"
+                                    android:text="fhgvjkl;l'"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/normal400"
+                                    android:textSize="@dimen/_14sdp"
+                                    android:textColor="@color/black"
+                                    android:textStyle="bold"/>
+
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/timer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:layout_marginBottom="12dp"
+                                android:fontFamily="@font/bold700"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:textSize="38sp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginBottom="8dp"
+                                android:background="#D0D7DD" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="20dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:paddingStart="16dp"
+                                android:paddingEnd="16dp">
+
+                                <ImageView
+                                    android:layout_width="22dp"
+                                    android:layout_height="22dp"
+                                    app:srcCompat="@drawable/ic_map_pin" />
+
+                                <TextView
+                                    android:id="@+id/placeName"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1.0"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="4dp"
+                                    android:fontFamily="@font/medium500"
+                                    android:textColor="#6C717D" />
+                                <ProgressBar
+                                    android:id="@+id/progress_bar"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:indeterminateTint="@color/al_Color"
+                                    android:layout_gravity="center"/>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/breakOutLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/img_break_out"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                app:srcCompat="@drawable/ic_break_out" />
+
+                            <TextView
+                                android:id="@+id/breakOutTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bold700"
+                                android:text="Break Out"
+                                android:textColor="@color/color_break_out"
+                                android:textSize="17sp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:padding="4dp"
+                                app:srcCompat="@drawable/ic_right" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="#D0D7DD" />
+
+                        <LinearLayout
+                            android:id="@+id/breakInLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="12dp"
+                            android:layout_marginEnd="12dp"
+                            android:layout_marginBottom="12dp"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:padding="16dp">
+
+                            <ImageView
+                                android:id="@+id/img_break_in"
+                                android:layout_width="48dp"
+                                android:layout_height="48dp"
+                                app:srcCompat="@drawable/ic_break_in" />
+
+                            <TextView
+                                android:id="@+id/breakInTxt"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="4dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/bold700"
+                                android:text="Break In"
+                                android:textColor="@color/color_break_in"
+                                android:textSize="17sp" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:padding="4dp"
+                                app:srcCompat="@drawable/ic_right" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/endShift"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:fontFamily="@font/roboto_medium"
+                    android:layout_marginStart="@dimen/_16sdp"
+                    android:paddingTop="@dimen/_12sdp"
+                    android:layout_marginEnd="@dimen/_16sdp"
+                    android:paddingBottom="@dimen/_12sdp"
+                    android:text="End Shift"
+                    android:textAllCaps="false"
+                    app:icon="@drawable/new_end_shif"
+                    app:iconGravity="textStart"
+                    app:iconSize="24dp"
+                    app:iconPadding="8dp"
+                    android:textColor="@color/white"
+                    app:backgroundTint="@color/colorSecondary"
+                    app:cornerRadius="@dimen/_20sdp" />
+            </LinearLayout>
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</layout>
